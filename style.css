@@ -1,4 +1,6 @@
-/* style.css */
+/* ============================================================
+   RESET + BASE
+============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -19,19 +21,22 @@
   --light-accent: #D4B237;
 }
 
-/* Tema oscuro */
+/* ============================================================
+   TEMAS
+============================================================ */
 body.dark-mode {
   background-color: var(--dark-bg);
   color: var(--dark-text);
 }
 
-/* Tema claro */
 body.light-mode {
   background-color: var(--light-bg);
   color: var(--light-text);
 }
 
-/* --- Navbar --- */
+/* ============================================================
+   NAVBAR
+============================================================ */
 .navbar {
   position: fixed;
   top: 20px;
@@ -44,8 +49,9 @@ body.light-mode {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, top 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
 }
 
 /* Fondo según modo */
@@ -57,6 +63,16 @@ body.dark-mode .navbar {
 body.light-mode .navbar {
   background-color: var(--light-bg);
   border: 1px solid #E0E0E0;
+}
+
+/* Estado cuando se hace scroll */
+.navbar.scrolled {
+  top: 0;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 /* Logo */
@@ -78,7 +94,6 @@ body.light-mode .navbar {
   transition: color 0.2s ease;
 }
 
-/* Modo oscuro */
 body.dark-mode .nav-links a {
   color: var(--dark-subtext);
 }
@@ -87,7 +102,6 @@ body.dark-mode .nav-links a:hover {
   color: var(--dark-accent);
 }
 
-/* Modo claro */
 body.light-mode .nav-links a {
   color: var(--light-subtext);
 }
@@ -111,7 +125,6 @@ body.light-mode .nav-links a:hover {
   font-weight: 500;
 }
 
-/* Sign in */
 body.dark-mode .signin {
   background: transparent;
   color: var(--dark-subtext);
@@ -134,7 +147,6 @@ body.light-mode .signin:hover {
   border-color: var(--light-accent);
 }
 
-/* Sign up */
 body.dark-mode .signup {
   background: var(--dark-accent);
   color: var(--dark-bg);
@@ -180,12 +192,104 @@ body.light-mode .signup:hover {
   cursor: pointer;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
   }
   .menu-toggle {
     display: block;
+  }
+}
+
+/* ============================================================
+   HERO IMAGE
+============================================================ */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 1;
+}
+
+/* Texto centrado encima */
+.hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.hero__content h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.hero__content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Efecto de desvanecimiento al hacer scroll */
+.hero.scrolled .hero__image {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+============================================================ */
+.main-content {
+  padding: 120px 50px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+body.dark-mode .main-content {
+  background: #111;
+}
+
+/* ============================================================
+   RESPONSIVE HERO
+============================================================ */
+@media (max-width: 1024px) {
+  .hero__content h1 {
+    font-size: 2.5rem;
+  }
+  .hero__content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__content h1 {
+    font-size: 2rem;
+  }
+  .hero__content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__content h1 {
+    font-size: 1.5rem;
+  }
+  .hero__content p {
+    font-size: 0.8rem;
   }
 }
