@@ -1,33 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AETERNUM IMPERIUM</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Aeternum Imperium</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">AETERNUM IMPERIUM</div>
+    <header class="navbar">
+        <div class="logo">AETERNUM IMPERIUM</div>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="colletions.html">Colletions</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="actions">
+            <div class="auth-buttons">
+                <button class="signin">Sign in</button>
+                <button class="signup">Sign up</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"></button>
+            </div>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
 
-    <nav class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="colletions.html">Colletions</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <section class="about-hero">
+        <div class="about-hero-content">
+          <!--
+          <h1>Aeternum Imperium</h1>
+          <p>El tiempo observa todo. Los imperios nacen y caen, pero solo los visionarios dejan su huella.</p>
+            -->
+        </div>
+    </section>
 
-    <div class="actions">
-      <div class="auth-buttons">
-        <button class="signin">Sign in</button>
-        <button class="signup">Sign up</button>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"></button>
-      </div>
-    </div>
+    <section class="about-history">
+        <div class="container">
+            <h2>Filosofía</h2>
+            <p>Aeternum Imperium nace del pensamiento de que todo es trascendental. A lo largo de la historia, muchos imperios han surgido y caído, y solo el tiempo ha sido testigo de ellos. Nuestros relojes no son para todos: están destinados a quienes controlan su tiempo, su disciplina y su visión, y buscan dejar una huella única en el mundo.</p>
+        </div>
+    </section>
 
-    <button class="menu-toggle">☰</button>
-  </header>
+    <section class="about-mission">
+        <div class="container">
+            <h2>Misión</h2>
+            <p>Nuestra misión es inspirar a quienes poseen un Aeternum Imperium a dominar su tiempo, cumplir sus objetivos y crear su propio imperio. Con nosotros, cada segundo cuenta, cada decisión importa.</p>
+        </div>
+    </section>
 
-  <script src="../script.js"></script>
+    <section class="about-values">
+        <div class="container">
+            <h2>Valores</h2>
+            <div class="values-grid">
+                <div class="value">
+                    <h3>Honestidad</h3>
+                    <p>Actuar con transparencia y compromiso.</p>
+                </div>
+                <div class="value">
+                    <h3>Elegancia</h3>
+                    <p>Diseño y presencia que trascienden el tiempo.</p>
+                </div>
+                <div class="value">
+                    <h3>Autenticidad</h3>
+                    <p>Ser fiel a uno mismo y a su visión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <div class="container">
+            <p>Solo aquellos que dominan su tiempo pueden crear su <strong>Aeternum Imperium</strong>.</p>
+            <a href="colletions.html" class="btn">Descubre nuestros relojes</a>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
 </body>
 </html>

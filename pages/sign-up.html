@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up - Aeternum Imperium</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="sign-in-up.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">AETERNUM IMPERIUM</div>
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="colletions.html">Colletions</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="actions">
+            <div class="auth-buttons">
+                <button class="signin" onclick="location.href='pages/sign-in.html'">Sign in</button>
+                <button class="signup" onclick="location.href='pages/sign-up.html'">Sign up</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"></button>
+            </div>
+        </div>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <section class="login">
+        <div class="login-container">
+            <div class="logo">AETERNUM IMPERIUM</div>
+            <h2>Sign up</h2>
+
+            <form id="signupForm">
+                <label for="full-name">Full name</label>
+                <input type="text" id="full-name" placeholder="Jon Snow" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="tucorreo@correo.com" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="********" required>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="updates">
+                    <label for="updates">I want to receive updates via email.</label>
+                </div>
+
+                <button type="submit" class="sign-in-btn">Sign up</button>
+            </form>
+
+            <div class="separator">or</div>
+
+            <a href="#" class="social-btn google-btn">Sign up with Google</a>
+            <a href="#" class="social-btn facebook-btn">Sign up with Facebook</a>
+
+            <div class="signup-link signin-link">
+                Already have an account? <a href="sign-in.html">Sign in</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>
