@@ -1,6 +1,3 @@
-/* ============================================================
-   RESET + BASE
-============================================================ */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +5,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Paleta base */
 :root {
   --dark-bg: #0A0A0A;
   --dark-text: #FFFFFF;
@@ -21,9 +17,6 @@
   --light-accent: #D4B237;
 }
 
-/* ============================================================
-   TEMAS
-============================================================ */
 body.dark-mode {
   background-color: var(--dark-bg);
   color: var(--dark-text);
@@ -34,9 +27,6 @@ body.light-mode {
   color: var(--light-text);
 }
 
-/* ============================================================
-   NAVBAR
-============================================================ */
 .navbar {
   position: fixed;
   top: 20px;
@@ -230,7 +220,7 @@ body.light-mode .signup:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
+  color: #FFFFFF;
   z-index: 2;
 }
 
@@ -291,5 +281,94 @@ body.dark-mode .main-content {
   }
   .hero__content p {
     font-size: 0.8rem;
+  }
+}
+
+.contact {
+  padding: 140px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: var(--dark-accent);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 178, 55, 0.3);
+  border-radius: 15px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: var(--light-text);
+}
+
+body.dark-mode .contact-form {
+  background: rgba(10, 10, 10, 0.85);
+  color: var(--dark-text);
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(212,178,55,0.4);
+  background-color: rgba(255,255,255,0.05);
+  color: inherit;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--dark-accent);
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--dark-accent);
+  color: var(--dark-bg);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: var(--light-accent);
+  color: var(--light-bg);
+}
+
+#respuesta {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--dark-accent);
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
   }
 }
