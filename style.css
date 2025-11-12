@@ -6,9 +6,29 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: #0A0A0A;
-  color: #FFFFFF;
+/* Paleta base */
+:root {
+  --dark-bg: #0A0A0A;
+  --dark-text: #FFFFFF;
+  --dark-subtext: #CCCCCC;
+  --dark-accent: #D4B237;
+
+  --light-bg: #CCCCCC;
+  --light-text: #0A0A0A;
+  --light-subtext: #555555;
+  --light-accent: #D4B237;
+}
+
+/* Tema oscuro */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Tema claro */
+body.light-mode {
+  background-color: var(--light-bg);
+  color: var(--light-text);
 }
 
 /* --- Navbar --- */
@@ -17,8 +37,6 @@ body {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #0A0A0A;
-  border: 1px solid #333;
   border-radius: 50px;
   width: 90%;
   max-width: 900px;
@@ -26,12 +44,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Fondo según modo */
+body.dark-mode .navbar {
+  background-color: var(--dark-bg);
+  border: 1px solid #333;
+}
+
+body.light-mode .navbar {
+  background-color: var(--light-bg);
+  border: 1px solid #E0E0E0;
 }
 
 /* Logo */
 .logo {
-  color: #D4B237;
+  color: var(--dark-accent);
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -43,58 +73,109 @@ body {
 }
 
 .nav-links a {
-  color: #CCCCCC;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-  color: #D4B237;
+/* Modo oscuro */
+body.dark-mode .nav-links a {
+  color: var(--dark-subtext);
 }
 
-/* Botones */
+body.dark-mode .nav-links a:hover {
+  color: var(--dark-accent);
+}
+
+/* Modo claro */
+body.light-mode .nav-links a {
+  color: var(--light-subtext);
+}
+
+body.light-mode .nav-links a:hover {
+  color: var(--light-accent);
+}
+
+/* Botones de sesión */
 .auth-buttons {
   display: flex;
   gap: 10px;
 }
 
-.auth-buttons .signin {
-  background: transparent;
-  color: #CCCCCC;
-  border: 1px solid #333;
+.auth-buttons .signin,
+.auth-buttons .signup {
   border-radius: 30px;
   padding: 6px 14px;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-weight: 500;
 }
 
-.auth-buttons .signin:hover {
-  color: #D4B237;
-  border-color: #D4B237;
+/* Sign in */
+body.dark-mode .signin {
+  background: transparent;
+  color: var(--dark-subtext);
+  border: 1px solid #333;
 }
 
-.auth-buttons .signup {
-  background: #D4B237;
-  color: #0A0A0A;
+body.dark-mode .signin:hover {
+  color: var(--dark-accent);
+  border-color: var(--dark-accent);
+}
+
+body.light-mode .signin {
+  background: transparent;
+  color: var(--light-subtext);
+  border: 1px solid #CCC;
+}
+
+body.light-mode .signin:hover {
+  color: var(--light-accent);
+  border-color: var(--light-accent);
+}
+
+/* Sign up */
+body.dark-mode .signup {
+  background: var(--dark-accent);
+  color: var(--dark-bg);
   border: none;
-  border-radius: 30px;
-  padding: 6px 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-.auth-buttons .signup:hover {
+body.dark-mode .signup:hover {
   background: #FFFFFF;
+  color: #000;
 }
 
-/* Botón menú móvil */
+body.light-mode .signup {
+  background: var(--light-accent);
+  color: #000;
+}
+
+body.light-mode .signup:hover {
+  background: #0A0A0A;
+  color: #FFF;
+}
+
+/* Botón de modo */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--dark-accent);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Menú móvil */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  color: #FFFFFF;
+  color: inherit;
   font-size: 1.4rem;
   cursor: pointer;
 }
@@ -104,7 +185,6 @@ body {
   .nav-links {
     display: none;
   }
-
   .menu-toggle {
     display: block;
   }
