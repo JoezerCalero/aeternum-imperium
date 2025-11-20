@@ -27,6 +27,14 @@ body.light-mode {
   color: var(--light-text);
 }
 
+
+.logo a {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--light-accent);
+  text-decoration: none;
+}
 .navbar {
   position: fixed;
   top: 20px;

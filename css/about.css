@@ -18,7 +18,13 @@ body {
   color: var(--dark-text);
 }
 
-
+.logo a {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--light-accent);
+  text-decoration: none;
+}
 
 a {
   color: inherit;
