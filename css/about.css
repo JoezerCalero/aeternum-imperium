@@ -6,7 +6,7 @@
 
   --light-bg: #FFFFFF;
   --light-text: #0A0A0A;
-  --light-subtext: #555555;
+  --light-subtext: #201c1c;
   --light-accent: #D4B237;
 }
 
@@ -17,6 +17,8 @@ body {
   background-color: var(--dark-bg);
   color: var(--dark-text);
 }
+
+
 
 a {
   color: inherit;
@@ -91,7 +93,7 @@ section {
 
 .value {
   flex: 1;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0);
   padding: 2rem;
   border-radius: 8px;
   text-align: center;
@@ -100,7 +102,7 @@ section {
 
 .value:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(255, 255, 255);
 }
 
 .value h3 {
