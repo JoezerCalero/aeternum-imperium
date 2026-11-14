@@ -1,158 +1,167 @@
-:root {
-  --dark-bg: #0A0A0A;
-  --dark-text: #FFFFFF;
-  --dark-subtext: #CCCCCC;
-  --dark-accent: #D4B237;
 
-  --light-bg: #FFFFFF;
-  --light-text: #0A0A0A;
-  --light-subtext: #201c1c;
-  --light-accent: #D4B237;
-}
+/* =========================================
+   AETERNUM IMPERIUM
+   ABOUT PAGE
+========================================= */
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--dark-bg);
-  color: var(--dark-text);
-}
 
-.logo a {
-  font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--light-accent);
-  text-decoration: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1, h2, h3 {
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-}
+/* =========================================
+   1. ABOUT HERO
+========================================= */
 
 .about-hero {
-  background: url('../img/hero-about.jpg') center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  color: var(--dark-text);
+    background: url('../img/hero-about.jpg') center/cover no-repeat;
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    position: relative;
+
+    color: var(--dark-text);
 }
 
 .about-hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .about-hero-content {
-  position: relative;
-  max-width: 800px;
-  padding: 2rem;
+    position: relative;
+    max-width: 800px;
+    padding: 2rem;
+    z-index: 1;
 }
 
 .about-hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
 }
 
 .about-hero p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: var(--dark-subtext);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--dark-subtext);
 }
 
+
+/* =========================================
+   2. ABOUT SECTIONS
+========================================= */
+
 section {
-  padding: 5rem 2rem;
+    padding: 5rem 2rem;
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
+
+
+/* =========================================
+   3. HISTORY / MISSION / VALUES
+========================================= */
 
 .about-history p,
 .about-mission p,
 .about-values p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--dark-subtext);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-subtext);
 }
 
+
+/* =========================================
+   4. VALUES GRID
+========================================= */
+
 .values-grid {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .value {
-  flex: 1;
-  background: rgba(0, 0, 0, 0);
-  padding: 2rem;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+    flex: 1;
+    background: rgba(0, 0, 0, 0);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .value:hover {
-  transform: translateY(-5px);
-  background: rgb(255, 255, 255);
+    transform: translateY(-5px);
+    background: rgb(255, 255, 255);
 }
 
 .value h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--dark-text);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--dark-text);
 }
 
+
+/* =========================================
+   5. CALL TO ACTION
+========================================= */
+
 .about-cta {
-  background: var(--dark-bg);
-  text-align: center;
-  padding: 4rem 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--dark-bg);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .about-cta p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-  font-weight: 500;
-  color: var(--dark-text);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: var(--dark-text);
 }
 
 .about-cta .btn {
-  background: var(--dark-accent);
-  color: var(--dark-bg);
-  padding: 0.8rem 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 4px;
-  transition: background 0.3s ease;
+    background: var(--dark-accent);
+    color: var(--dark-bg);
+
+    padding: 0.8rem 2rem;
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
 .about-cta .btn:hover {
-  background: #e0b85b;
+    background: #e0b85b;
 }
 
+
+/* =========================================
+   6. RESPONSIVE ABOUT
+========================================= */
+
 @media (max-width: 768px) {
-  .values-grid {
-    flex-direction: column;
-  }
-  .about-hero h1 {
-    font-size: 2.2rem;
-  }
-  .about-hero p {
-    font-size: 1rem;
-  }
+
+    .values-grid {
+        flex-direction: column;
+    }
+
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+
 }
