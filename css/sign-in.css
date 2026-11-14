@@ -10,17 +10,15 @@
 ========================================= */
 
 .login-container {
-    max-width: 400px;
-
     background: var(--light-bg);
-
+    backdrop-filter: blur(12px);
+    
+    border: 1px solid rgba(212, 178, 55, 0.3);
+    border-radius: 15px;
+    
+    max-width: 400px;
     margin: 80px auto;
     padding: 30px 25px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-
     text-align: center;
 }
 
@@ -34,21 +32,21 @@ body.dark-mode .login-container {
 
 
 /* =========================================
-   2. AUTH LOGO
+2. AUTH LOGO
 ========================================= */
 
 .login-container .logo {
     font-size: 1.8rem;
     font-weight: 700;
-
+    
     color: var(--dark-accent);
-
+    
     margin-bottom: 20px;
 }
 
 
 /* =========================================
-   3. AUTH TITLES
+3. AUTH TITLES
 ========================================= */
 
 .login-container h1 {
@@ -58,7 +56,7 @@ body.dark-mode .login-container {
 
 
 /* =========================================
-   4. FORM GROUPS
+4. FORM GROUPS
 ========================================= */
 
 .login-container .form-group {
@@ -74,23 +72,23 @@ body.dark-mode .login-container {
 
 
 /* =========================================
-   5. INPUT FIELDS
+5. INPUT FIELDS
 ========================================= */
 
 .login-container input[type="email"],
 .login-container input[type="password"],
 .login-container input[type="text"] {
     width: 100%;
-
+    
     padding: 8px 10px;
-
+    
     border-radius: 6px;
     border: 1px solid #CCC;
 }
 
 
 /* =========================================
-   6. CHECKBOX
+6. CHECKBOX
 ========================================= */
 
 .login-container .checkbox-group {
@@ -105,23 +103,23 @@ body.dark-mode .login-container {
 
 
 /* =========================================
-   7. SIGN IN BUTTON
+7. SIGN IN BUTTON
 ========================================= */
 
 .login-container .sign-in-btn {
     width: 100%;
-
+    
     padding: 10px;
-
+    
     border: none;
     border-radius: 8px;
-
+    
     background: var(--dark-accent);
     color: var(--dark-bg);
-
+    
     font-weight: 600;
     cursor: pointer;
-
+    
     margin-bottom: 12px;
 }
 
@@ -131,21 +129,21 @@ body.dark-mode .login-container {
 
 
 /* =========================================
-   8. SOCIAL BUTTONS
+8. SOCIAL BUTTONS
 ========================================= */
 
 .login-container .social-btn {
     display: block;
     width: 100%;
-
+    
     padding: 10px;
-
+    
     border-radius: 8px;
     margin-bottom: 10px;
-
+    
     text-decoration: none;
     color: var(--dark-bg);
-
+    
     font-weight: 600;
 }
 
@@ -163,13 +161,13 @@ body.dark-mode .login-container {
 
 
 /* =========================================
-   9. AUTH LINKS
+9. AUTH LINKS
 ========================================= */
 
 .login-container .forgot-password,
 .login-container .signup-link {
     display: block;
-
+    
     margin-top: 10px;
 
     font-size: 0.9rem;
@@ -182,3 +180,4 @@ body.dark-mode .login-container {
 .login-container .signup-link a:hover {
     color: var(--dark-accent);
 }
+
